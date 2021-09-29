@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>지훈 포트폴리오</title>
+	<title>신지훈 포트폴리오</title>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
 	<link rel="stylesheet" href="./css/reset.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
@@ -17,11 +17,16 @@
 	<script src="./js/slick.min.js"></script>
 </head>
 <body>
-
-<div id="secthion1">
-
-	<h1><a href="#"><img src="./img/제목_없는_아트워크.png" alt=""></h1></h1>
-	<a class="topmenu" href="#"><span>Page<br>Up</span></a>
+	
+<header id="header">
+	<!-- 로고 -->
+	<h1><a href="#"><img src="./img/logo.png" alt=""></a></h1>
+	<!-- go top -->
+<div class="gotop">
+	<a href="#"><i class="fas fa-caret-square-up"></i></a>
+</div>
+	
+		<!-- 햄버거 -->
 	<div class="open">
 		<!-- <i class="fas fa-bars"></i> -->
 		<span class="bar bar1"></span>
@@ -29,10 +34,9 @@
 		<span class="bar bar3"></span>
 		<span class="blind">메뉴열기</span>
 	</div>
-	
 	<div class="openlist">
 		<ul>
-			<li><a href="#sect1">about me</a></li>
+			<li><a href="#sect1">About me</a></li>
 			<li><a href="#sect2">My skills</a></li>
 			<li><a href="#sect3">My Portfolio</a></li>
 			<li><a href="#sect4">Contact Me</a></li>
@@ -53,9 +57,9 @@
 		<li><a href="#"><i class="fab fa-twitter"></i></a></li>
 		<li><a href="#"><i class="fas fa-envelope"></i></a></li>
 	</ul>
-	
+</header>
 	<!-- 전체 페이지 -->
-	<div id="wrap">
+	<main id="main">
 	
 		<!-- 첫 번째 박스 -->
 		<section id="sect1">
@@ -63,35 +67,31 @@
 				<div class="slideInner">
 					<div class="slide slide1">
 						<div class="text">
-							<p>Well Come,</p>
-							<p>This is Jihoon's Website.</p>
+							<h3>Well Come,</h3>
+							<h3>This is Jihoon's Website.</h3>
 						</div>
 					</div>
 					<div class="slide slide2">
 						<div class="text">
-							<p>안녕하세요!</p>
-							<p>웹 개발을 꿈꾸는<br>
-								신지훈입니다.</p>
-							<h5>profile</h5>
-							<span>
+							<h4>안녕하세요!<br>
+								웹 개발을 꿈꾸는 신지훈이라고 합니다.</h4>
+							<p>
+								<strong>profile</strong><br>
 								1993.06.04 출생<br>
-								2019.1.청주서원대학교 미술과 한국화 졸업<br>
-								2019.1-2021.3 도쿄도 신주쿠구 사쿠라다이닝 근무<br>
-								2021.5.31-강남그린컴퓨터학원 UIUX디자인 프론트엔드 과정<br>
-							</span>
+								2019.1.청주서원대학교 미술학과 한국화 졸업<br>
+								2019.1.-2021.3. 도쿄도 신주쿠구 사쿠라다이닝 근무<br>
+								2021.5.31- 강남그린컴퓨터학원 UIUX디자인 프론트엔드 과정<br>
+							</p>
 						</div>
 					</div>
 					<div class="slide slide3">
 						<div class="text">
 							<div class="self1">
-								<p>Address</p>
-								<p>License</p>
+								<h3>Address and <span class="gray">License</span></h3>
 								<span class="self">
 								tlswlgns1234@naver.com<br>
-								010-7656-1728<br>
 								</span>
 								<span class="lise">
-								2017. 운전면허1종<br>
 								2020.1 일본어능력시험Jlpt N2<br>
 								다른 컴퓨터 관련자격증은 앞으로<br> 계속 공부하면서 취득할 예정입니다</span>
 							</div>
@@ -109,31 +109,31 @@
 					<div class="score">
 						<div class="myscore"></div>
 					</div>
-					<p>HTML5</p>
+					<p>Html5 <i class="fab fa-html5"></i></p>
 				</div>
 				<div class="css">
 					<div class="score">
 						<div class="myscore"></div>
 					</div>
-					<p>CSS3</p>
+					<p>Css3 <i class="fab fa-css3-alt"></i></p>
 				</div>
 				<div class="script">
 					<div class="score">
 						<div class="myscore"></div>
 					</div>
-					<p>javaScript</p>
+					<p>Javascript<i class="fab fa-js"></i></p>
 				</div>
 				<div class="jquery">
 					<div class="score">
 						<div class="myscore"></div>
 					</div>
-					<p>jQuery</p>
+					<p>jquery <i class="fab fa-js-square"></i></p>
 				</div>
 				<div class="react">
 					<div class="score">
 						<div class="myscore"></div>
 					</div>
-					<p>React</p>
+					<p>React <i class="fab fa-react"></i></p>
 				</div>
 			</div>
 		</section>
@@ -146,88 +146,32 @@
 				<a href="#">React</a>
 			</div>
 			<ul>
-				<li><a href="http://www.naver.com" title="포트폴리오 0" data-desc="이 포트폴리오의 설명글입니다. 이 포트폴리오의 설명글입니다. 이 포트폴리오의 설명글입니다. 이 포트폴리오의 설명글입니다. 이 포트폴리오의 설명글입니다." data-font="폰트 : 나눔고딕, 크기 : 16px" data-color1="#ff0" data-color2="#00f"><img src="./img/여둘11.jpg" alt="이미지1"></a></li>
-				<li><a href="http://www.daum.net" title="포트폴리오 1"><img src="./img/피아노.jpg" alt="이미지2"></a></li>
-				<li><a href="http://google.com" title="포트폴리오 2"><img src="./img/핑크옷.jpg" alt="이미지3"></a></li>
-				<li><a href="http://www.naver.com" title="포트폴리오 3"><img src="./img/초록아토.jpg" alt="이미지4"></a></li>
-				<li><a href="http://www.daum.net" title="포트폴리오 4"><img src="./img/여둘.jpg" alt="이미지5"></a></li>
-				<li><a href="http://google.com" title="포트폴리오 5"><img src="./img/대케.jpg" alt="이미지6"></a></li>
-				<li><a href="http://www.naver.com" title="포트폴리오 6"><img src="./img/마나카페.png" alt="이미지7"></a></li>
-				<li><a href="http://www.daum.net" title="포트폴리오 7"><img src="./img/레드아토.jpg" alt="이미지8"></a></li>
+				<li><a href="http://www.naver.com" title="포트폴리오 0" data-desc="이 포트폴리오의 설명글입니다. 이 포트폴리오의 설명글입니다. 이 포트폴리오의 설명글입니다. 이 포트폴리오의 설명글입니다. 이 포트폴리오의 설명글입니다." data-font="폰트 : 나눔고딕, 크기 : 16px" data-color1="#ff0" data-color2="#00f"><img src="./img/mamojisu.jpg" alt="이미지1"></a></li>
+				<li><a href="http://www.daum.net" title="포트폴리오 1"><img src="./img/piano.jpg" alt="이미지2"></a></li>
+				<li><a href="http://google.com" title="포트폴리오 2"><img src="./img/pinkgirl.jpg" alt="이미지3"></a></li>
+				<li><a href="http://www.naver.com" title="포트폴리오 3"><img src="./img/girl.jpg" alt="이미지4"></a></li>
+				<li><a href="http://www.daum.net" title="포트폴리오 4"><img src="./img/girl2.jpg" alt="이미지5"></a></li>
+				<li><a href="http://google.com" title="포트폴리오 5"><img src="./img/napal.jpg" alt="이미지6"></a></li>
+				<li><a href="http://www.naver.com" title="포트폴리오 6"><img src="./img/cafe.jpg" alt="이미지7"></a></li>
+				<li><a href="http://www.daum.net" title="포트폴리오 7"><img src="./img/midori.jpg" alt="이미지8"></a></li>
 			</ul>
 		</section>
 		
 		<!-- 네 번째 박스 -->
 		<section id="sect4">
-			<div class="formbox">
-				<form action="#" mothod="post">
-					<fieldset>
-						<legend class="blind">연락처를 남겨주세요.</legend>
-						<table>
-							<colgroup>
-								<col>
-								<col>
-							</colgroup>
-							<tr>
-								<td>
-									<label for="irum">Name</label>
-								</td>
-								<td>
-									<input type="text" name="irum" id="irum">
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<label for="phone"Adress>Phone</label>
-								</td>
-								<td>
-									<input type="text" name="hp1" id="phone"> -
-									<input type="text" name="hp2"> -
-									<input type="text" name="hp3">
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<label for="email">Mail</label>
-								</td>
-								<td>
-									<input type="text" id="email" name="eid"> @
-									<input type="text" name="edomain">
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<label for="memo">Memo</label>
-								</td>
-								<td>
-									<textarea name="memo" id="memo"></textarea>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<label for="attach">File</label>
-								</td>
-								<td>
-									<input type="file" id="attach">
-								</td>
-							</tr>
-						</table>
-					</fieldset>
-					<div class="btn">
-						<button type="submit">전송</button>
-						<button type="reset">취소</button>
-					</div>
-				</form>
-			</div>
+			
 		</section>
+
 	
-	</div>
-  
-</div>
- <!-- 바깥라인 -->
-<div id="outside">
-	<a href="#">Click</a>
-</div>
+
+	</main>
+
+	<div class="introAni">
+        <div><i class="fas fa-circle-notch fa-spin"></i></div>
+        <div>0%</div>
+    </div>
+
+	
 <script src="./js/index.js"></script>
 
 </body>

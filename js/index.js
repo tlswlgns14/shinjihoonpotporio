@@ -1,9 +1,7 @@
 $('html, body').stop().animate({
     scrollTop : 0
 }, 1000)
-$('#outside a').on('click',function(){
-    $('#outside').addClass('on')
-})
+
 
 $('#menu li').eq(0).addClass('on')
 var cflag = false;
@@ -81,13 +79,20 @@ var sDist1 = $('#sect2').offset().top
 var sDist2 = $('#sect3').offset().top
 
 // 마지막구간이 윈도우높이보다 클때
-var lastSect = $('#sect4').offset().top             
+// var lastSect = $('#sect4').offset().top             
 // 마지막구간이 윈도우높이보다 작을때
-// var lastSect = $('body').height() - $(window).height()
+var lastSect = $('body').height() - $(window).height()
 var sct=0;
 $(window).on('scroll', function(){
     // var wh = $(this).height()
-    sct = $(this).scrollTop()
+    var sct = $(this).scrollTop()
+    if(sct>=100) {
+        $('.gotop').addClass('on')   
+       } else if (sct<100) {
+           $('.gotop').removeClass('on')
+       }
+
+
     if ( sct>=sDist0 && sct<sDist1 && !cflag) {
         $('#menu li').eq(0).addClass('on')
         $('#menu li').eq(0).siblings().removeClass('on')
@@ -297,11 +302,11 @@ $('body').on('click', '.inlayer .prev', function(e){
 // 햄버거 클릭시 메뉴박스 오픈하기
 $('.open').on('click', function(){
 
-    if ( $(this).hasClass('on') ) {
-        $(this).removeClass('on')
+    if ( !$(this).hasClass('on') ) {
+        $(this).addClass('on')
         // $(this).find('i').removeClass('fa-times').addClass('fa-bars')
     } else {
-        $(this).addClass('on')
+        $(this).removeClass('on')
         // $(this).find('i').removeClass('fa-bars').addClass('fa-times')
     }
 
@@ -311,5 +316,32 @@ $('.openlist li a').click(function(){
     $('.open').removeClass('on');
 });
 
+$('.gotop a').on('click',function(e){
+    e.preventDefault()
+    $('html,body').animate({
+        scrollTop:0
+    },600)
+})
 
+$(window).on('load', function(){
+    var i = 0;
+    var timer = setInterval(add, 25)
 
+    function add(){
+        i++
+        if (i>=100) {
+            clearInterval(timer)
+            $('.introAni').animate({ left:'-100%' }, 500, function(){ 
+                $(this).hide() 
+            
+                var cookie = document.cookie
+                if ( cookie === "" || cookie === "popupYN=N" ) {
+                    // window.open('문서경로', '창이름', '옵션(창크기, 창위치')
+                    window.open('./popup.html', '', 'width=500, height=680, top=100, left=100, scrollbars=no, resizable=no')
+                } 
+
+            } )
+        }
+        $('.introAni div').eq(1).text(i+'%')
+    }
+})
