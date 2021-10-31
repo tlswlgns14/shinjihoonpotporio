@@ -9,12 +9,13 @@
 	<link rel="stylesheet" href="./css/reset.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 	<link rel="stylesheet" href="./css/slick.css">
-	<link rel="stylesheet" href="./css/normalize.css">
 	<link rel="stylesheet" href="./css/index.css">
 	<script src="./js/jquery-1.12.4.min.js"></script>
-	<script src="./js/prefixfree.min.js"></script>
+	<script src="js/isotope.pkgd.min.js"></script>
+	<!-- <script src="./js/prefixfree.min.js"></script> -->
 	<script src="./js/jquery.mousewheel.min.js"></script>
 	<script src="./js/slick.min.js"></script>
+
 </head>
 <body>
 	
@@ -23,9 +24,31 @@
 	<h1><a href="#"><img src="./img/logo.png" alt=""></a></h1>
 	<!-- go top -->
 <div class="gotop">
-	<a href="#"><i class="fas fa-caret-square-up"></i></a>
+	<a href="#">
+		<i class="fas fa-angle-double-up"></i>
+	</a>
 </div>
-	
+
+<div class="popup">
+	<div class="popself">
+		<h2 class="popselfd">
+			- 신지훈 -<br>
+			웹 포트폴리오
+		</h2>
+		<p>
+			안녕하세요.<br>
+			본사이트는 저의 개인 포트폴리오 용도로 만들어졌습니다.<br>
+			방문해주셔서 감사드립니다.
+		</p>
+	</div>
+	<div class="che">
+		<input type="checkbox">
+		<label>오늘하루 열지 않기</label>
+		<a href="javascript:;">닫기</a>            
+	</div>
+</div>
+
+	 
 		<!-- 햄버거 -->
 	<div class="open">
 		<!-- <i class="fas fa-bars"></i> -->
@@ -39,7 +62,8 @@
 			<li><a href="#sect1">About me</a></li>
 			<li><a href="#sect2">My skills</a></li>
 			<li><a href="#sect3">My Portfolio</a></li>
-			<li><a href="#sect4">Contact Me</a></li>
+			<li><a href="#sect4">Explanation</a></li>
+			<li><a href="#sect5">Contact Me</a></li>
 		</ul>
 	</div>
 	
@@ -48,6 +72,7 @@
 		<li><a href="#"><span>About Me</span></a></li>
 		<li><a href="#"><span>My Skills</span></a></li>
 		<li><a href="#"><span>My Portfolio</span></a></li>
+		<li><a href="#"><span>Explanation</span></a></li>
 		<li><a href="#"><span>Contact Me</span></a></li>
 	</ul>
 	
@@ -68,32 +93,40 @@
 					<div class="slide slide1">
 						<div class="text">
 							<h3>Well Come,</h3>
-							<h3>This is Jihoon's Website.</h3>
+							<h3>This is <span class="names">Jihoon's</span class="names"> Website.</h3>
 						</div>
 					</div>
 					<div class="slide slide2">
 						<div class="text">
 							<h4>안녕하세요!<br>
-								웹 개발을 꿈꾸는 신지훈이라고 합니다.</h4>
-							<p>
-								<strong>profile</strong><br>
-								1993.06.04 출생<br>
-								2019.1.청주서원대학교 미술학과 한국화 졸업<br>
-								2019.1.-2021.3. 도쿄도 신주쿠구 사쿠라다이닝 근무<br>
-								2021.5.31- 강남그린컴퓨터학원 UIUX디자인 프론트엔드 과정<br>
-							</p>
+								웹 개발을 꿈꾸는 <span>신지훈</span>이라고 합니다.
+							</h4>
+							<p>Profile</p>
+							<ul>
+								<li><strong>생년월일 :</strong> 1993년06월04일 출생</li>
+								<li>
+									<strong>경력 :</strong> 2021.05.31 ~ 2021.11.15 강남그린컴퓨터학원<br>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UIUX디자인 웹 퍼블리셔 프론트엔드 과정<br> 
+													       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2019.1.~ 2021.3. 도쿄도 신주쿠구 사쿠라다이닝 근무
+								</li>
+							<li><strong>학력 :</strong> 2019.1.청주서원대학교 미술학과 한국화 졸업</li>
+							</ul>
 						</div>
 					</div>
 					<div class="slide slide3">
-						<div class="text">
+						<div class="text1">
 							<div class="self1">
-								<h3>Address and <span class="gray">License</span></h3>
-								<span class="self">
-								tlswlgns1234@naver.com<br>
-								</span>
-								<span class="lise">
-								2020.1 일본어능력시험Jlpt N2<br>
-								다른 컴퓨터 관련자격증은 앞으로<br> 계속 공부하면서 취득할 예정입니다</span>
+								<h3>Address and
+								<span class="gray">License</span>
+								</h3>
+								<ul class="adli">
+									<li><strong>Mail :</strong> tlswlgns14@naver.com</li>
+									<li><strong>Phone :</strong> 010-7656-1728</li>
+									<li><strong>License :</strong> 2020.02 Jlpt N2 일본어능력시험<br>
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2017.06 운전면허1종보통<br><br>
+												 	 다른 컴퓨터 자격증은 앞으로 계속 공부해 나가며 취득 할 예정입니다.
+									</li>
+								</ul>
 							</div>
 						</div>
 					</div>
@@ -105,6 +138,8 @@
 		<!-- 두 번째 박스 -->
 		<section id="sect2">
 			<div class="skillContainer">
+				<h3>My Skills</h3>
+				<span class="line"></span>
 				<div class="html">
 					<div class="score">
 						<div class="myscore"></div>
@@ -141,52 +176,143 @@
 		<!-- 세 번째 박스 -->
 		<section id="sect3">
 			<div class="category">
-				<a href="#">All</a>
-				<a href="#">반응형웹</a>
-				<a href="#">React</a>
+				<a href="#" data-filter="*">All</a>
+				<a href="#" data-filter=".res">반응형웹</a>
+				<a href="#" data-filter=".react">React</a>
 			</div>
-			<ul>
-				<li><a href="http://www.naver.com" title="포트폴리오 0" data-desc="이 포트폴리오의 설명글입니다. 이 포트폴리오의 설명글입니다. 이 포트폴리오의 설명글입니다. 이 포트폴리오의 설명글입니다. 이 포트폴리오의 설명글입니다." data-font="폰트 : 나눔고딕, 크기 : 16px" data-color1="#ff0" data-color2="#00f"><img src="./img/mamojisu.jpg" alt="이미지1"></a></li>
-				<li><a href="http://www.daum.net" title="포트폴리오 1"><img src="./img/piano.jpg" alt="이미지2"></a></li>
-				<li><a href="http://google.com" title="포트폴리오 2"><img src="./img/pinkgirl.jpg" alt="이미지3"></a></li>
-				<li><a href="http://www.naver.com" title="포트폴리오 3"><img src="./img/girl.jpg" alt="이미지4"></a></li>
-				<li><a href="http://www.daum.net" title="포트폴리오 4"><img src="./img/girl2.jpg" alt="이미지5"></a></li>
-				<li><a href="http://google.com" title="포트폴리오 5"><img src="./img/napal.jpg" alt="이미지6"></a></li>
-				<li><a href="http://www.naver.com" title="포트폴리오 6"><img src="./img/cafe.jpg" alt="이미지7"></a></li>
-				<li><a href="http://www.daum.net" title="포트폴리오 7"><img src="./img/midori.jpg" alt="이미지8"></a></li>
+			<ul class="grid">
+				<li class="item res"><a href="http://www.naver.com" title="포트폴리오 0" data-desc="이 포트폴리오의 설명글입니다. 이 포트폴리오의 설명글입니다. 이 포트폴리오의 설명글입니다. 이 포트폴리오의 설명글입니다. 이 포트폴리오의 설명글입니다." data-font="폰트 : 나눔고딕, 크기 : 16px" data-color1="#ff0" data-color2="#00f"><img src="./img/mamojisu.jpg" alt="이미지1"></a></li>
+				<li class="item react"><a href="http://www.daum.net" title="포트폴리오 1"><img src="./img/piano.jpg" alt="이미지2"></a></li>
+				<li class="item res"><a href="http://google.com" title="포트폴리오 2"><img src="./img/pinkgirl.jpg" alt="이미지3"></a></li>
+				<li class="item react"><a href="http://www.naver.com" title="포트폴리오 3"><img src="./img/girl.jpg" alt="이미지4"></a></li>
+				<li class="item res"><a href="http://www.daum.net" title="포트폴리오 4"><img src="./img/girl2.jpg" alt="이미지5"></a></li>
+				<li class="item react"><a href="http://google.com" title="포트폴리오 5"><img src="./img/napal.jpg" alt="이미지6"></a></li>
+				<li class="item res"><a href="http://www.naver.com" title="포트폴리오 6"><img src="./img/cafe.jpg" alt="이미지7"></a></li>
+				<li class="item react"><a href="http://www.daum.net" title="포트폴리오 7"><img src="./img/midori.jpg" alt="이미지8"></a></li>
 			</ul>
 		</section>
 		
 		<!-- 네 번째 박스 -->
 		<section id="sect4">
-			
+			<div class="exp">
+				<h3>Explanation</h3>
+				<span class="line1"></span>
+			</div>
+			<article class="article6 row">
+				<dl>
+					<dt>HTML5 & CSS3 <a href="#"><span class="blind">상세보기</span><i class="fas fa-minus"></i></a></dt>
+					<dd>- 웹 표준을 준수하여 사용자의 요구에 맞게 구현 가능합니다.<br>  
+						- Layout을 파악하고 HTML5에 적용 가능 합니다.
+						- Media Query를 이용하여 반응형 웹 구현 가능가능합니다.
+					</dd>
+					<dt>Javascript & jquery <a href="#"><span class="blind">상세보기</span><i class="fas fa-plus"></i></a></dt>
+					<dd>- 오픈소스를 활용하여 사용할 수 있고, 간단한 효과는 직접 개발 가능합니다.<br>  
+						- 기본 구문과 구조, DOM 조작 방법을 할수있습니다.
+						- Ajex, Event, Prototype 개념을 파악하고 있습니다.
+					</dd>
+					<dt>PHOTOSHOP <a href="#"><span class="blind">상세보기</span><i class="fas fa-plus"></i></a></dt>
+					<dd>-기초적인 이미지 수정 ,보완 가능<br>  
+					</dd>
+					<dt>PHP, MYSQL ,GIT <a href="#"><span class="blind">상세보기</span><i class="fas fa-plus"></i></a></dt>
+					<dd>- php의 기본 문법과 함수, 변수선언 등 기초적인 흐름을 파악하였습니다.<br>
+						- MYSQL을 이용하여 Table을 생성하고 데이터 기입 및 수정 가능합니다.<br>
+						- GIT의 Workflow와 commit에 대하여 학습하였습니다.	  
+					</dd>
+				</dl>            
+			</article>
 		</section>
-
-	
-
+		<section id="sect5">
+			<div class="other">
+				<div class="conta">
+					<h3>Contact me</h3>
+					<span class="line2"></span>
+				</div>
+				<div class="inner">
+					<div class="notice">
+						<h2>NOTICE</h2>
+						<table>
+							<colgroup>
+								<col>
+								<col>
+							</colgroup>
+							<tr>
+								<td><a href="#">새로운 홍보사항을 알려드립니다.알려드립니다.알려드립니다.</a></td>
+								<td>2021-11-03</td>
+							</tr>
+							<tr>
+								<td><a href="#">새로운 홍보사항을 알려드립니다.알려드립니다.</a></td>
+								<td>2021-11-03</td>
+							</tr>
+							<tr>
+								<td><a href="#">새로운 홍보사항을 알려드립니다.알려드립니다.</a></td>
+								<td>2021-11-03</td>
+							</tr>
+							<tr>
+								<td><a hre•f="#">새로운 홍보사항을 알려드립니다.알려드립니다.</a></td>
+								<td>2021-11-03</td>
+							</tr>
+							<tr>
+								<td><a href="#">새로운 홍보사항을 알려드립니다.알려드립니다.</a></td>
+								<td>2021-11-03</td>
+							</tr>
+						</table>
+						<a href="notice.html" class="noticemore">더보기</a>
+					</div>
+					<div class="qna">
+					<div class="myqna">
+						<a href="#">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<img src="./img/m-os01.png" alt="">
+							<h3>1:1문의</h3>
+							<p>문의사항을 남겨주시면 신속히 연락드립니다.</p>
+						</a>
+					</div>
+					<div class="roadmap">
+						<a href="#">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+							<img src="./img/m-os02.png" alt="">
+							<h3>오시는 길</h3>
+							<p>당사의 약도를 보실 수 있는 공간입니다.</p>
+						</a>
+					</div>
+					</div>
+					<div class="cscenter">
+						<h3>CUSTOMER CENTER</h3>
+						<a href="010-7656-1728">H.P 010-7656-1728</a>
+						<p>월~일 오전 12:00 ~ 오후 24:00,
+							<span>토/일/공휴일 연중무휴 입니다.</span></p>
+					</div>
+				</div>
+			</div>
+			<div class="copyOuter">
+				<div class="copyInner">
+					<p class="thk">
+						Thank you for visiting
+					</p>
+					<p>&copy 2021.Shin JiHOON Portfolio</p>
+				</div>
+			</div>
+		</section>
 	</main>
 
-	<div class="introAni">
-        <div><i class="fas fa-circle-notch fa-spin"></i></div>
-        <div>0%</div>
-    </div>
-
 	
-<script src="./js/index.js"></script>
+	
 
+
+
+
+
+ <div class="loader">
+			<div class="bar">
+			   <div class="loaded"></div>
+			</div>
+ </div>
+<script src="./js/index.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-

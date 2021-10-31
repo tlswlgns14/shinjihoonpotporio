@@ -1,3 +1,67 @@
+
+    for(var i = 0; i < 40; i++) {
+        var radius = (rnd(1600,3400)/10);
+        var modifier = radius/160;
+        $(".loader").append("<div class=\"spinner\" style=\"animation: bar " + 4*modifier + "s linear infinite; height: " + radius + "px; animation-delay: -" + (rnd(40,80)/10) + "s\"></div>");
+     }
+     
+     var loaded = 0;
+     function loader() {
+        if(rnd(0,1) == 1) {
+           loaded++;
+           $(".spinner:nth-child(" + Math.floor(loaded/2.5) + ")").css("height", "0px");
+           $(".loaded").css("width", (loaded + "%"));
+        }
+        if(loader >= 100) {
+           clearInterval(runloader)
+        }
+        
+     }
+     var runloader = setInterval(loader,1); 
+     
+     function rnd(m,n) {
+        m = parseInt(m);
+        n = parseInt(n);
+        return Math.floor( Math.random() * (n - m + 1) ) + m;
+     }
+
+
+
+     $(window).on('load', function(){
+        $('.loader').delay(4000).fadeOut()
+        // "popupYN=Y", "popupYN=N"
+        // 레이어 팝업 (오늘하루그만보기)
+            var cookie = document.cookie
+            console.log(cookie)
+            var cookieArray = cookie.split(';')
+            if ( cookie !== "" && cookieArray[0] === "popupYN=Y" ) {
+                $('.popup').hide()
+            } else {
+                $('.popup').show()
+            }
+            $(".grid").isotope({
+                filter:"*",
+                layoutMode:'masonry',
+                itemSelector:'.item',
+            })
+     })
+    
+
+
+     $('.popup a').on("click",function(){
+        if ( $(this).prev().prev().prop('checked') ) {
+            var d = new Date()
+            d.setTime(d.getTime()+(24*60*60*1000))
+            var expires = "expires="+d.toUTCString()
+            document.cookie = "popupYN=Y;"+expires
+     } else {
+            document.cookie = "popupYN=N"
+     }
+        $('.popup').hide()
+    })
+
+
+
 $('html, body').stop().animate({
     scrollTop : 0
 }, 1000)
@@ -77,6 +141,7 @@ function count(jumsu, cname, time) {
 var sDist0 = $('#sect1').offset().top
 var sDist1 = $('#sect2').offset().top
 var sDist2 = $('#sect3').offset().top
+var sDist3 = $('#sect4').offset().top
 
 // 마지막구간이 윈도우높이보다 클때
 // var lastSect = $('#sect4').offset().top             
@@ -103,15 +168,15 @@ $(window).on('scroll', function(){
         $('#menu li').eq(1).siblings().removeClass('on')
         if ( !$('.skillContainer').hasClass('on') ) {
             $('.skillContainer').addClass('on')
-            count(70, '.html', 15)
-            count(60, '.css', 16)
-            count(80, '.script', 17)
-            count(60, '.jquery', 18)
+            count(95, '.html', 15)
+            count(85, '.css', 16)
+            count(50, '.script', 17)
+            count(65, '.jquery', 18)
             count(50, '.react', 19)
         }
         $('#sect3').removeClass('on')
         $('#sect3 ul li').css({ transitionDelay:'0s' })
-    } else if ( sct>=sDist2 && sct<lastSect && !cflag) {
+    } else if ( sct>=sDist2 && sct< sDist3 && !cflag) {
         $('#menu li').eq(2).addClass('on')
         $('#menu li').eq(2).siblings().removeClass('on')
         $('#sect4').removeClass('on')
@@ -122,9 +187,12 @@ $(window).on('scroll', function(){
         $('#sect4 .formbox').css({
             transitionDelay:'0s'
         })
-    } else if ( sct>=lastSect && !cflag) {
+    } else if ( sct>=sDist3 && sct<lastSect && !cflag ){
         $('#menu li').eq(3).addClass('on')
         $('#menu li').eq(3).siblings().removeClass('on')
+    } else if ( sct>=lastSect && !cflag) {
+        $('#menu li').eq(4).addClass('on')
+        $('#menu li').eq(4).siblings().removeClass('on')
         $('#sect4').addClass('on')
     } 
 
@@ -323,25 +391,35 @@ $('.gotop a').on('click',function(e){
     },600)
 })
 
-$(window).on('load', function(){
-    var i = 0;
-    var timer = setInterval(add, 25)
+// istope 플러그인 연결(갤러리필터링)
+$(".category a").on("click", function(){
+    var filterValue =  $(this).attr("data-filter")
+     $(".grid").isotope({
+         filter:filterValue,
+         layoutMode:'masonry', // fitRows, masonry
+         itemSelector:'.item',
+     })
+     return false
+ })
 
-    function add(){
-        i++
-        if (i>=100) {
-            clearInterval(timer)
-            $('.introAni').animate({ left:'-100%' }, 500, function(){ 
-                $(this).hide() 
-            
-                var cookie = document.cookie
-                if ( cookie === "" || cookie === "popupYN=N" ) {
-                    // window.open('문서경로', '창이름', '옵션(창크기, 창위치')
-                    window.open('./popup.html', '', 'width=500, height=680, top=100, left=100, scrollbars=no, resizable=no')
-                } 
+ $('.article6 dt').eq(0).next().slideDown()
+$('.article6 dt').on('click', function(){
+    // $(this).toggleClass('on')
+    $(this).next().slideToggle(500)
 
-            } )
-        }
-        $('.introAni div').eq(1).text(i+'%')
+    if ( $(this).find('i').hasClass('fa-plus') ){
+        $(this).find('i').addClass('fa-minus').removeClass('fa-plus')
+    } else {
+        $(this).find('i').addClass('fa-plus').removeClass('fa-minus')
     }
+    // $(this).siblings('dt').removeClass('on')
+    $(this).siblings('dt').next().slideUp(500)
+
+    $(this).siblings('dt').find('i').removeClass('fa-minus').addClass('fa-plus')
+})
+
+$('.article6 dt a').on('click',function(e){
+    e.preventDefault()
+    //e.stopPropagation()
+    
 })
