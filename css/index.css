@@ -1,8 +1,10 @@
 @charset "utf-8";
 @import url(http://fonts.googleapis.com/css?family=Righteous);
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
+/* font-family: 'Chelsea Market', cursive; */
 /* font-family: 'Black Han Sans', sans-serif; */
-
 
 html { overflow:hidden;}
 body { font:12px/1.6 arial; color:#000; }
@@ -110,7 +112,7 @@ h1 img { width:220px;
 
 /* 고탑메뉴 */
 .gotop { position: fixed; bottom: 10px; right: 80px;
-    font-size: 40px; color: #000; z-index: 99998;
+    font-size: 40px; color: rgb(99, 76, 247); z-index: 99998;
     opacity: 0; transition: all 0.5s; 
     animation:up 0.5s  infinite alternate linear
 }   
@@ -154,7 +156,7 @@ h1 img { width:220px;
     z-index: 999;
     width: 50px; height: 50px;
     border-radius: 50%;
-    background-color: #94153b;
+    background-color: rgb(99, 76, 247);
     font-size:25px; color: #fff;
     text-align: center;
     line-height: 50px;
@@ -189,14 +191,14 @@ h1 img { width:220px;
     line-height: 2;
     font-size: 40px;
     opacity: 0;
-    transition:all 0.5s;
+    transition:all 0.5s; font-family: 'Chelsea Market', cursive;
 }
 #header .open.on + .openlist ul {
     opacity: 1;
 }
 
 #header #menu { position:fixed; top:50%; transform:translateY(-50%); left:50px; z-index:99 }
-#header #menu li {  margin:10px 0  }
+#header #menu li {  margin:10px 0 ; font-family: 'Chelsea Market', cursive; }
 #header #menu li a { display:block; height:20px;  width:20px;
     border-radius:50%; background-color:#adaba9; 
     position:relative 
@@ -326,6 +328,7 @@ font-size: 28px; border-bottom: 1px solid #000;
 .slideInner .slide3 .text1 .self1 .gray {color: darkslateblue; }
 
 /* 두번째 박스(스킬 그래프) */
+.skillContainer {font-family: 'Chelsea Market', cursive; }
 .skillContainer > h3 { font-size: 30px; font-weight: bold;}
 .skillContainer > .line { width: 60px; display: block; background: #000; height: 3px; margin: 0 auto; margin-top: 5px;}
 .skillContainer { height:100%; text-align:center; padding:8% 0 5% }
@@ -377,7 +380,7 @@ font-size: 28px; border-bottom: 1px solid #000;
 }
 /* 세번째 박스 */
 #sect3 { padding:50px 150px;
-    background-image:url(../img/paper.jpeg); }
+    background-image:url(../img/paper.jpeg); font-family: 'Chelsea Market', cursive;  }
 #sect3 .category { font-size:17px; color:#fff; margin-bottom:20px;
     text-align: center;}
 #sect3 .category a { background-color:#3c3d41; padding:7px 20px; display:inline-block;  border-radius:5px;
@@ -413,10 +416,10 @@ font-size: 28px; border-bottom: 1px solid #000;
 /* 4번째 구역 */
 #sect4 { padding:200px 200px 100px 300px;
     background-image:url(../img/paper.jpeg);
-    position: relative;
+    position: relative; font-family: 'Chelsea Market', cursive;
 }
-#sect4 .exp { position: relative; bottom: 50px; left:-30px;}
-#sect4 .exp > h3 { font-size: 30px; font-weight: bold; text-align: center;}
+#sect4 .exp { position: relative; bottom: 50px; left:-30px; }
+#sect4 .exp > h3 { font-size: 30px; font-weight: bold; text-align: center;  }
 #sect4 .exp > .line1 { width: 60px; display: block; 
                      background: #000; height:3px; 
                      margin: 0 auto; margin-top: 5px;}
@@ -445,10 +448,10 @@ font-size: 28px; border-bottom: 1px solid #000;
     display: block;
 }
 
-#sect5 {
+#sect5 { 
     background-image:url(../img/paper.jpeg);}
 #sect5 .other { padding: 60px 0;}
-#sect5 .other .conta { margin-top: 70px;}
+#sect5 .other .conta { margin-top: 70px; font-family: 'Chelsea Market', cursive;}
 #sect5 .other .conta > h3 { font-size: 30px; font-weight: bold; text-align: center;}
 #sect5 .other .conta > .line2 { width: 60px; display: block; 
                      background: #000; height:3px; 
@@ -521,12 +524,4 @@ padding:26px 12px 12px; transition:all 0.3s ;}
 }
 #sect5 .copyOuter .copyInner .thk { font-size: 27px;}
 
-
-
-
 #sect2,#sect3,#sect4,#sect5 {cursor: url(../img/pen.png),auto;}
-
-
-
-
-

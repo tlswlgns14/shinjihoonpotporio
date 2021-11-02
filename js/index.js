@@ -28,6 +28,9 @@
 
 
      $(window).on('load', function(){
+        skroll.recalcPosition();
+
+
         $('.loader').delay(4000).fadeOut()
         // "popupYN=Y", "popupYN=N"
         // 레이어 팝업 (오늘하루그만보기)
@@ -245,6 +248,7 @@ $('#sect3 ul li a').on('click', function(e){
     var font = $(this).attr('data-font')
     var color1 = $(this).attr('data-color1')
     var color2 = $(this).attr('data-color2')
+    var color3 = $(this).attr('data-color3')
     // console.log(src)
     $('body').append('<div class="outlayer"><div class="inlayer"><img src="" alt=""><div class="text"><h2></h2><p class="p1"></p><p class="p2"></p><p class="p3"><span></span><span></span></p></div></div></div>')
     $('.outlayer').css({ position:'fixed',
@@ -259,7 +263,7 @@ $('#sect3 ul li a').on('click', function(e){
     })
     .append('<button class="close"><i class="fas fa-times-circle"></i></button>')
     .append(`<div><a href="${href}" target="_blank" title="${title}">사이트 이동하기</a></div>`)
-    .append('<button class="prev"><i class="fas fa-angle-left"></i></button><button class="next"><i class="fas fa-angle-right"></i></button>')
+    // .append('<button class="prev"><i class="fas fa-angle-left"></i></button><button class="next"><i class="fas fa-angle-right"></i></button>')
     $('.inlayer .close').css({
         border:'none',
         position:'absolute',
@@ -268,18 +272,18 @@ $('#sect3 ul li a').on('click', function(e){
         color:'#fff',
         fontSize:'50px'
     })
-    $('.inlayer .prev').css({
-        position:'absolute',
-        top:'50%', transform:'translateY(-50%)',
-        left:'-100px', fontSize:'80px', color:'#fff',
-        border:'none'
-    })
-    $('.inlayer .next').css({
-        position:'absolute',
-        top:'50%', transform:'translateY(-50%)',
-        right:'-100px', fontSize:'80px', color:'#fff',
-        border:'none'
-    })
+    // $('.inlayer .prev').css({
+    //     position:'absolute',
+    //     top:'50%', transform:'translateY(-50%)',
+    //     left:'-100px', fontSize:'80px', color:'#fff',
+    //     border:'none'
+    // })
+    // $('.inlayer .next').css({
+    //     position:'absolute',
+    //     top:'50%', transform:'translateY(-50%)',
+    //     right:'-100px', fontSize:'80px', color:'#fff',
+    //     border:'none'
+    // })
     $('.inlayer .text').css({
         display:'inline-block',
         width:'40%',
@@ -421,5 +425,19 @@ $('.article6 dt').on('click', function(){
 $('.article6 dt a').on('click',function(e){
     e.preventDefault()
     //e.stopPropagation()
-    
 })
+
+
+// duration(진행시간), wait(대기시간), 
+    // delay(같은줄에 있는 동일클래스들간의 간격시간),
+    // repeat:true (반복가능)
+    var skroll = new Skroll()
+    .add(".sk1", {animation:"zoomIn", duration:1000, wait:500, delay:300, repeat:true
+})
+    .add(".sk2", {animation:"fadeInUp", duration:1000, delay:300, repeat:true
+})
+    .add(".sk3", {animation:"fadeInLeft", duration:1000, delay:300, repeat:true})
+    .add(".sk4", {animation:"fadeInUp", duration:1000, delay:300, repeat:true})
+    .add(".sk5", {animation:"fadeInRight", duration:1000, delay:300, repeat:true})
+    // .add(".sk4", {animation:"rotateRightIn", duration:1000})
+    .init()
