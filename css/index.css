@@ -449,7 +449,10 @@ font-size: 28px; border-bottom: 1px solid #000;
 }
 
 #sect5 { 
-    background-image:url(../img/paper.jpeg);}
+    background-image: url(../img/paper.jpeg);
+    
+}
+
 #sect5 .other { padding: 60px 0;}
 #sect5 .other .conta { margin-top: 70px; font-family: 'Chelsea Market', cursive;}
 #sect5 .other .conta > h3 { font-size: 30px; font-weight: bold; text-align: center;}
@@ -459,22 +462,23 @@ font-size: 28px; border-bottom: 1px solid #000;
 #sect5 .other .inner { overflow: hidden;}
 
 #sect5 .other .inner > div {
-    float: left; width:32.3333% ;
+    float: left; width:39%;
 }
-#sect5 .other .inner > div.qna {
-    margin: 0 1.5%;
-}
+#sect5 .other .inner > div:nth-child(2) {
+    width: 20%; border: 1px solid #ccc; margin:0px 1%;
+ }
+
 
 #sect5 .other .notice { position:relative}
 #sect5 .other .notice h2{ font-size:20px; color:#333; text-align: left;
 border-bottom: 1px solid #ccc; padding-bottom: 5px; margin-bottom: 15px;
 font-weight: normal;}
-#sect5 .other .notice table { font-size: 12px; color: #777; table-layout: fixed;}
+#sect5 .other .notice table { font-size: 14px; color: #777; table-layout: fixed;}
 #sect5 .other .notice col:first-child {width:auto;}
 #sect5 .other .notice col:last-child {width:80px ;}
 #sect5 .other .notice td:first-child { white-space:nowrap; overflow: hidden; text-overflow: ellipsis; padding-right: 5px;}
 #sect5 .other .notice td:last-child { text-align: center;}
-#sect5 .other .notice td {padding: 1px 0px;}
+#sect5 .other .notice td {padding: 3.5px 0px;}
 /* #main .other .notice td a::before { content:' ・ '; padding-right: 3px;} */
 
 
@@ -491,37 +495,28 @@ background-position:left center;
     position:absolute; top:10px; right:10px; font-size:12px; color:#999
 }
 #sect5 .other .notice .noticemore:hover {color:#cc1b38}
-#sect5 .other .qna .myqna { float:left; width: 48%; margin-right:4%; background-color: #444c58;}
-#sect5 .other .qna .roadmap { float:left; width:48%; background-color:#7a838e ;}
+#sect5 .other .qna .myqna { }
+#sect5 .other .qna a {  transition:all 0.3s ;}
+#sect5 .other .qna a:hover {}
 
-
-
-
-
-
-
-#sect5 .other .qna a { display: block; text-align: center; color:#fff;
-padding:26px 12px 12px; transition:all 0.3s ;}
-#sect5 .other .qna a:hover {background-color: #002a62; }
-#sect5 .other .qna h3 {font-size: 15px; margin:10px 0; font-weight: normal; }
-#sect5 .other .qna p { font-size: 12px;}
 #sect5 .other .cscenter {
-    padding:20px 10px 20px; border: 1px solid #ccc;
+    padding:39px 10px 39px; border: 1px solid #ccc;
     text-align: center;
 }
-#sect5 .other .cscenter h3 { font-size: 16px; color:#333}
-#sect5 .other .cscenter a { font-size: 24px; color: #cc1b38; display: block;
+#sect5 .other .cscenter h3 { font-size: 21px; color:#333}
+#sect5 .other .cscenter a { font-size: 27px; color: #cc1b38; display: block;
  padding:10px 0;
 }
-#sect5 .other .cscenter p { font-size: 12px; color:#999}
+#sect5 .other .cscenter p { font-size: 14px; color:#999}
 #sect5 .other .cscenter p span{ display: block;}
 
 
-#sect5 .copyOuter { width: 100%; background: #333853; height: 80px;
+#sect5 .copyOuter { width: 100%; background: #333853; height: 160px;
     position: absolute; left: 0; bottom: 0; 
 }
-#sect5 .copyOuter .copyInner { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); font-size: 14px; color: #fff; text-align: center;
+#sect5 .copyOuter .copyInner { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); color: #fff; text-align: center;
 }
-#sect5 .copyOuter .copyInner .thk { font-size: 27px;}
+#sect5 .copyOuter .copyInner .thk { font-size: 38px; padding: 5px 0px 5px;}
+#sect5 .copyOuter .copyInner > p { font-size: 18px;}
 
 #sect2,#sect3,#sect4,#sect5 {cursor: url(../img/pen.png),auto;}
